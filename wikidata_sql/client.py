@@ -3,7 +3,7 @@
 import requests
 
 WIKIDATA_SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
-USER_AGENT = "WikidataSQL/0.1 (https://github.com/ericr/Wikidata-SQL)"
+USER_AGENT = "WikiSQL/0.1.0 (https://github.com/Emma-Leonhart/Wikidata-SQL)"
 
 
 def execute_sparql(sparql: str) -> dict:

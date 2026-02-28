@@ -1,6 +1,5 @@
 """Command-line interface for WikiSQL."""
 
-import io
 import sys
 from tabulate import tabulate
 from .parser import parse

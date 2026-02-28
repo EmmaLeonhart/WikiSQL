@@ -2,12 +2,35 @@
 name = "WikiSQL"
 version = "0.1.0"
 description = "Run SQL queries against Wikidata by translating them to SPARQL"
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.11"
+authors = [
+    { name = "Emma-Leonhart" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database :: Front-Ends",
+]
 dependencies = [
-    "sqlglot>=26.0",
     "requests>=2.31",
     "tabulate>=0.9",
 ]
 
+[project.urls]
+Homepage = "https://github.com/Emma-Leonhart/Wikidata-SQL"
+Repository = "https://github.com/Emma-Leonhart/Wikidata-SQL"
+Issues = "https://github.com/Emma-Leonhart/Wikidata-SQL/issues"
+
 [project.scripts]
 wikisql = "wikidata_sql.cli:main"
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
