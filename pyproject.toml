@@ -1,5 +1,5 @@
 [project]
-name = "wikidata-sql"
+name = "WikiSQL"
 version = "0.1.0"
 description = "Run SQL queries against Wikidata by translating them to SPARQL"
 requires-python = ">=3.11"
