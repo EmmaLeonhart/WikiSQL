@@ -1,6 +1,6 @@
 [project]
 name = "WikiSQL"
-version = "0.1.0"
+version = "0.2.0"
 description = "Run SQL queries against Wikidata by translating them to SPARQL"
 readme = "README.md"
 license = "MIT"

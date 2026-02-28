@@ -3,22 +3,22 @@
 import sys
 from tabulate import tabulate
 from .parser import parse
-from .sparql import to_sparql
+from .sparql import compile_query
 from .client import execute_sparql, results_to_table
 
 
 def run_query(sql: str, language: str = "en", show_sparql: bool = False) -> None:
     """Parse, translate, execute, and display a WikiSQL query."""
     query = parse(sql)
-    sparql = to_sparql(query, language=language)
+    result = compile_query(query, language=language)
 
     if show_sparql:
         print("\n--- Generated SPARQL ---")
-        print(sparql)
+        print(result.sparql)
         print("------------------------\n")
 
-    data = execute_sparql(sparql)
-    headers, rows = results_to_table(data)
+    data = execute_sparql(result.sparql)
+    headers, rows = results_to_table(data, column_map=result.column_map)
 
     if not rows:
         print("(no results)")
