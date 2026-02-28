@@ -4,7 +4,8 @@
       "Bash(cargo init:*)",
       "Bash(where cargo:*)",
       "Bash(cmd.exe:*)",
-      "Bash(export:*)"
+      "Bash(export:*)",
+      "Bash(gh run:*)"
     ]
   }
 }
