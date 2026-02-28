@@ -1,0 +1,13 @@
+[project]
+name = "wikidata-sql"
+version = "0.1.0"
+description = "Run SQL queries against Wikidata by translating them to SPARQL"
+requires-python = ">=3.11"
+dependencies = [
+    "sqlglot>=26.0",
+    "requests>=2.31",
+    "tabulate>=0.9",
+]
+
+[project.scripts]
+wikisql = "wikidata_sql.cli:main"

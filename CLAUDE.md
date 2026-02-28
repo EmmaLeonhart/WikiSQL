@@ -7,10 +7,16 @@
 - **Update README.md regularly.** It should always reflect the current state of the project for human readers.
 
 ## Project Description
-_TODO: Describe what this project is about._
+SQL-to-SPARQL translator for Wikidata. Users write SQL with Q-IDs as table names, and the tool translates to SPARQL, executes against the Wikidata Query Service, and displays results.
 
 ## Architecture and Conventions
-_TODO: Document key decisions, file structure, and patterns as they emerge._
+- **Language:** Python 3.13
+- **Package:** `wikidata_sql/` (installed as `wikisql` CLI)
+- **Parser:** Custom regex-based parser in `parser.py` - extracts WikiTable references (Q-IDs with optional P: prefix) and standard SQL clauses
+- **SPARQL Generator:** `sparql.py` - converts `WikiQuery` dataclass into SPARQL query strings
+- **Client:** `client.py` - executes SPARQL against `query.wikidata.org/sparql` and formats results
+- **CLI:** `cli.py` - argparse-based CLI with interactive REPL mode
+- **Key convention:** No property prefix means P31 (instance of). `P279:Q845945` means "subclass of Shinto shrine".
 
 # currentDate
 Today's date is 2026-02-28.
